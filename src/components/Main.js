@@ -9,7 +9,6 @@ const useStyles = makeStyles({
     display: 'grid',
     height: '100vh',
     gridTemplateRows: '1fr auto',
-    background: 'rgb(1,34,3)',
     background: 'radial-gradient(circle, #56573c 3%, #190609 100%)',
     color: '#fff',
   },
