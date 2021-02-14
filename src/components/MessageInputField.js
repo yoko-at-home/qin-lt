@@ -10,9 +10,10 @@ const useStyles = makeStyles({
   root: {
     gridRow: 2,
     margin: '26px',
-    backgroundColor: '#fff',
+    backgroundColor: '#fbfbbb',
     borderRadius: '5px',
     padding: '1rem',
+    color: '#fff',
   },
 });
 
