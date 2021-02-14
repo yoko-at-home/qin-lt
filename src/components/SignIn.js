@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    textAlign: 'center',
   },
   avatar: {
     margin: theme.spacing(1),
@@ -55,21 +56,23 @@ export default function SignIn({ setName }) {
   }, [string]);
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component='main' maxWidth='xs'>
       <CssBaseline />
       <div className={classes.paper}>
-        <Typography component="h1" variant="h5">
-          ようこそ
+        <Typography component='h1' variant='h5'>
+          【Qinの国民に告ぐ】
+          <br />
+          ニックネームを入力して、鬨の声をあげよ！！
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
-            variant="outlined"
-            margin="normal"
+            variant='outlined'
+            margin='normal'
             required
             fullWidth
-            id="name"
-            label="ニックネーム"
-            name="name"
+            id='name'
+            label='ニックネーム'
+            name='name'
             autoFocus
             onChange={(e) => setString(e.target.value)}
             onKeyDown={(e) => {
@@ -84,10 +87,10 @@ export default function SignIn({ setName }) {
             onCompositionEnd={() => setIsComposed(false)}
           />
           <Button
-            type="button"
+            type='button'
             fullWidth
-            variant="contained"
-            color="primary"
+            variant='contained'
+            color='primary'
             className={classes.submit}
             disabled={disabled}
             onClick={() => {
