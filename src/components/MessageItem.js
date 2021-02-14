@@ -38,12 +38,12 @@ const MessageItem = ({ isLastItem, name, text }) => {
         primary={name}
         secondary={
           <Typography
-            component="span"
-            variant="body2"
+            component='span'
+            variant='body2'
             className={classes.inline}
-            color="textPrimary"
+            color='textPrimary'
           >
-            <Linkify>{text}</Linkify>
+            <Linkify properties={{ target: '_blank' }}>{text}</Linkify>
           </Typography>
         }
       />
