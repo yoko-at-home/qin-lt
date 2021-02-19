@@ -64,6 +64,7 @@ export default function SignIn({ setName }) {
           <br />
           ニックネームを入力して、鬨の声をあげよ！！
         </Typography>
+
         <form className={classes.form} noValidate>
           <TextField
             variant='outlined'
@@ -97,9 +98,15 @@ export default function SignIn({ setName }) {
               setName(string);
             }}
           >
-            はじめる
+            Lightinig Talk会に参加する
           </Button>
         </form>
+        <Typography component='p' variant='p'>
+          <br />
+          鬨の声（ときのこえ）とは
+          <br />
+          戦国時代の合戦において、開戦直前に士気を高める意味合いで「エイエイオー！」などと全軍で発する叫び声のことである
+        </Typography>
       </div>
       <Box mt={8}>
         <Copyright />
