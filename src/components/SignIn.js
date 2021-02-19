@@ -62,7 +62,7 @@ export default function SignIn({ setName }) {
         <Typography component='h1' variant='h5'>
           【Qinの国民に告ぐ】
           <br />
-          ニックネームを入力して、鬨の声をあげよ！！
+          ニックネームを入力して入室し、鬨の声をあげよ！！
         </Typography>
 
         <form className={classes.form} noValidate>
