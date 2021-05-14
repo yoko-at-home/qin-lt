@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { List } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
 import MessageItem from './MessageItem';
 import { messagesRef } from '../firebase';
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 const useStyles = makeStyles({
   root: {
@@ -16,6 +25,11 @@ const useStyles = makeStyles({
 const MessageList = () => {
   const [messages, setMessages] = useState([]);
   const classes = useStyles();
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   useEffect(() => {
     messagesRef
@@ -37,20 +51,32 @@ const MessageList = () => {
   const length = messages.length;
 
   return (
-    <List className={classes.root}>
-      {messages.map(({ key, name, text }, index) => {
-        const isLastItem = length === index + 1;
-
-        return (
-          <MessageItem
-            key={key}
-            name={name}
-            text={text}
-            isLastItem={isLastItem}
-          />
-        );
-      })}
-    </List>
+    <>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label='simple tabs example'
+        centered
+      >
+        <Tab label='すべてのメッセージ' {...a11yProps(0)} />
+        <Tab label='質問だけ見る' {...a11yProps(1)} />
+      </Tabs>
+      <List className={classes.root}>
+        {messages
+          .filter(({ IsChecked }) => IsChecked ===  true || value  ===  0)
+          .map(({ key, name, text }, index) => {
+                    const isLastItem = length === index + 1;
+                    return (
+                      <MessageItem
+                        key={key}
+                        name={name}
+                        text={text}
+                        isLastItem={isLastItem}
+                      />
+                    );
+                  })}
+      </List>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 
-import { pushMessage } from '../firebase';
+// import { pushMessage } from '../firebase';
 
 const MessageField = ({ inputEl, name, setText, text }) => {
   const [isComposed, setIsComposed] = useState(false);
@@ -16,13 +16,13 @@ const MessageField = ({ inputEl, name, setText, text }) => {
         if (isComposed) return;
 
         const text = e.target.value;
-        if (text === '') return;
+        if (text === "") return;
 
-        if (e.key === 'Enter') {
-          pushMessage({ name, text });
-          setText('');
-          e.preventDefault();
-        }
+        // if (e.key === 'Enter') {
+        //   pushMessage({ name, text });
+        //   setText('');
+        //   e.preventDefault();
+        // }
       }}
       onCompositionStart={() => setIsComposed(true)}
       onCompositionEnd={() => setIsComposed(false)}
