@@ -24,6 +24,6 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 export const messagesRef = database.ref('messages');
 
-export const pushMessage = ({ name, text }) => {
-  messagesRef.push({ name, text });
+export const pushMessage = ({ name, text, IsChecked }) => {
+  messagesRef.push({ name, text, IsChecked });
 };

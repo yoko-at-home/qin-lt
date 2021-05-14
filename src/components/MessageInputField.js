@@ -10,11 +10,11 @@ import {IsQuestion} from "./IsQuestion";
 const useStyles = makeStyles({
   root: {
     gridRow: 2,
-    margin: '26px',
-    backgroundColor: '#fbfbbb',
-    borderRadius: '5px',
-    padding: '1rem',
-    color: '#fff',
+    margin: "26px",
+    backgroundColor: "#e7f5ed",
+    borderRadius: "5px",
+    padding: "1rem",
+    color: "#fff",
   },
 });
 

@@ -63,18 +63,18 @@ const MessageList = () => {
       </Tabs>
       <List className={classes.root}>
         {messages
-          .filter(({ IsChecked }) => IsChecked ===  true || value  ===  0)
-          .map(({ key, name, text }, index) => {
-                    const isLastItem = length === index + 1;
-                    return (
-                      <MessageItem
-                        key={key}
-                        name={name}
-                        text={text}
-                        isLastItem={isLastItem}
-                      />
-                    );
-                  })}
+          .filter(({ IsChecked }) => IsChecked === true || value === 0)
+          .map(({ key, name, text, IsChecked }, index) => {
+            const isLastItem = length === index + 1;
+            return (
+              <MessageItem
+                key={key}
+                name={name}
+                text={text}
+                isLastItem={isLastItem}
+              />
+            );
+          })}
       </List>
     </>
   );
