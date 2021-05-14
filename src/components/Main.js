@@ -6,11 +6,12 @@ import MessageList from './MessageList';
 
 const useStyles = makeStyles({
   root: {
-    display: 'grid',
-    height: '100vh',
-    gridTemplateRows: '1fr auto',
-    background: 'radial-gradient(circle, #56573c 3%, #190609 100%)',
-    color: '#fff',
+    display: "grid",
+    height: "100vh",
+    gridTemplateRows: "1fr auto",
+    // background: 'radial-gradient(circle, #56573c 3%, #190609 100%)',
+    background: "radial-gradient(circle, rgba(1,17,97,1) 48%, #110104 96%)",
+    color: "#fff",
   },
 });
 
