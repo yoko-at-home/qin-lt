@@ -4,7 +4,7 @@ import Main from './Main';
 import SignIn from './SignIn';
 import config from '../config.json';
 
-export default () => {
+const App = () => {
   const [name, setName] = useState('');
 
   if (config.signInEnabled && name === '') {
@@ -13,3 +13,5 @@ export default () => {
     return <Main name={name} />;
   }
 };
+
+export default App
