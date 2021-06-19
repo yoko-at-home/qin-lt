@@ -24,7 +24,6 @@ export const IsQuestion = ({ IsChecked, setIsChecked }) => {
       <Checkbox
         checked={IsChecked}
         onChange={handleChange}
-        color='purple'
         inputProps={{ "aria-label": "secondary checkbox" }}
       />
     </div>
