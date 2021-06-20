@@ -13,6 +13,7 @@
     "react-dom": "^17.0.2",
     "react-linkify": "^1.0.0-alpha",
     "react-scripts": "4.0.3",
+    "react-sparkle": "^1.0.8",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
