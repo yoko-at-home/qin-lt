@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     lineHeight: "0.2rem",
     whiteSpace: "nowrap",
+    color: "white",
     padding: 0,
   },
 });
@@ -20,11 +21,26 @@ export const IsQuestion = ({ IsChecked, setIsChecked }) => {
 
   return (
     <div className={classes.root}>
-      <div style={{ color: "purple", fontSize: "0.7rem" }}>質問する</div>
+      {IsChecked ? (
+        <div
+          style={{
+            fontSize: "0.7rem",
+            textShadow: "0px 0px 12px 3px #f0f0f0",
+          }}
+        >
+          解除してコメント
+        </div>
+      ) : (
+        <div
+          style={{ fontSize: "0.7rem", textShadow: "0px 0px 12px 3px #f0f0f0" }}
+        >
+          チェックして質問
+        </div>
+      )}
       <Checkbox
         checked={IsChecked}
         onChange={handleChange}
-        inputProps={{ "aria-label": "secondary checkbox" }}
+        inputProps={{ "aria-label": "primary checkbox" }}
       />
     </div>
   );
