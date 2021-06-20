@@ -9,7 +9,10 @@ const useStyles = makeStyles({
     display: "grid",
     height: "100vh",
     gridTemplateRows: "1fr auto",
-    background: "radial-gradient(circle, rgba(1,17,97,1) 48%, #110104 96%)",
+    // background: "radial-gradient(circle, rgba(1,17,97,1) 48%, #110104 96%)",
+    // background: "radial-gradient(circle, #56573c 3%, #190609 100%)",
+    background:
+      "radial-gradient(circle, rgba(6,85,92,1) 0%, rgba(38,7,38,1) 90%)",
     color: "#fff",
   },
 });
